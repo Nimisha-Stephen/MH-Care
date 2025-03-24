@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MH-Care - Welcome</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to  CSS -->
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">MH-Care</a>
+    <!----<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>----->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!---<li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>--->
+        
+        <!-- MH Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="mentalHealthDropdown" role="button" data-toggle="dropdown">Mental Health</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Finding Help</a>
+            <a class="dropdown-item" href="#">Brochures</a>
+            <a class="dropdown-item" href="#">Your Mental Health Questionnaire</a>
+          </div>
+        </li>
+        
+        <!-- Services Dropdown with Nested  Psychiatry -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown">Services</a>
+          <div class="dropdown-menu">
+            
+            <!-- Nested dropdown for Psychiatry -->
+            <div class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Psychiatry</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="tip.html">Book Appointment</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- News Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-toggle="dropdown">News</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Press Releases</a>
+            <a class="dropdown-item" href="#">FAQ</a>
+          </div>
+        </li>
+
+        <!-- About Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown">About</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">About Us</a>
+            <a class="dropdown-item" href="#">Our Team</a>
+            <a class="dropdown-item" href="#">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+   
+      <!-- Language Selector -->
+      <form class="form-inline ml-auto">
+        <select class="form-control">
+          <option>English</option>
+          <option>Français</option>
+        </select>
+		&nbsp;
+		&nbsp;
+		<a href="login.php" class="btn btn-login mr-2">Login</a>
+      </form>
+    </div>
+  </nav>  	 	
+
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    </ol>
+  </nav>
+
+  <!-- Welcome Section -->
+  
+    <div class="container">
+      <h1><center>Welcome to St. Joseph's MH-Care</center></h1>
+      <p><center>Providing Mental Health support and Psychiatric services</center></p>
+    </div>
+  
+  <!--- image-->
+  
+  <style>
+    body {
+      background-image: url('https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/Health-Topics/Mental-Health-Substance-Use/mental_health_hospital_admissions_770x433.png?h=433&iar=0&w=770&hash=74F37D54EC376C3752DBB78380C7BD5D');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    
+    <style>
+      footer {
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         background-color: #007bff;
+         color: white;
+         padding: 20px 0;
+         text-align: center;
+      }
+    </style>
+
+  <footer>
+    <p>&copy; 2024 MH-Care | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    //  jQuery code to enable nested dropdown functionality
+    $(document).ready(function() {
+      $('.dropdown-submenu .dropdown-toggle').on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).next('.dropdown-menu').toggle();
+      });
+    });
+  </script>
+
+</body>
+</html>

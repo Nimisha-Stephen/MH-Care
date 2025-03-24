@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MH-Care - Book Appointment</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to  CSS -->
+  <style>
+  #warningMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  } 
+</style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">MH-Care</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="mentalHealthDropdown" role="button" data-toggle="dropdown">Mental Health</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Finding Help</a>
+            <a class="dropdown-item" href="#">Brochures</a>
+            <a class="dropdown-item" href="#">Your Mental Health Questionnaire</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown">Services</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Psychiatry</a>
+               <div class="dropdown-menu">
+                  <a class="dropdown-item" href="tip.html">Book Appointment</a>
+               </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-toggle="dropdown">News</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Press Releases</a>
+            <a class="dropdown-item" href="#">FAQ</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown">About</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">About Us</a>
+            <a class="dropdown-item" href="#">Our Team</a>
+            <a class="dropdown-item" href="#">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item"><a href="index.html">Services</a></li>
+    <li class="breadcrumb-item"><a href="index.html">Psychiatry</a></li>
+    <li class="breadcrumb-item"><a href="tip.html">Book Appointment</a></li>
+  </ol>
+</nav>
+
+  <!-- Form Section -->
+  <div class="container">
+    <h2>Book a Psychiatric Appointment</h2>
+    <form id="appointmentForm">
+      <div class="form-group">
+        <label for="firstName">First Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone <span class="text-danger">*</span></label>
+        <input type="tel" class="form-control" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="date1">Desired Date <span class="text-danger">*</span></label>
+        <input type="date" class="form-control" id="date1" required>
+      </div>
+      <div class="form-group">
+        <label for="time1">Desired Time Frame <span class="text-danger">*</span></label>
+        <select class="form-control" id="time1">
+          <option>8:00 AM - 9:00 AM</option>
+          <option>9:00 AM - 10:00 AM</option>
+          <option>10:00 AM - 11:00 AM</option>
+          <option>11:00 AM - 12:00 PM</option>
+          <option>12:00 PM - 1:00 PM</option>
+          <option>1:00 PM - 2:00 PM</option>
+          <option>2:00 PM - 3:00 PM</option>
+          <option>3:00 PM- 4:00 PM</option>
+          <option>4:00 PM- 5:00 PM</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city">
+      </div>
+      <div class="form-group">
+        <label for="province">Province</label>
+        <input type="text" class="form-control" id="province">
+      </div>
+      <div class="form-group">
+        <label for="postalCode">Postal Code</label>
+        <input type="text" class="form-control" id="postalCode">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <div id="warningMessage" class="alert alert-danger mt-3" style="display: none;">
+      </div>
+      <div style="height:100px;">
+      </div>
+    </form>
+  </div>
+  <!--<style>
+    footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: #007bff;
+       color: white;
+       padding: 20px 0;
+       text-align: center;
+    }
+    </style>-->
+  <footer>
+    <p>&copy; 2024 MH-Care | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+      event.preventDefault(); 
+
+      // Required fields
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const phone = document.getElementById('phone').value;
+      const date1 = document.getElementById('date1').value;
+      const time1 = document.getElementById('time1').value;
+
+      //Check required fields
+      if (!firstName || !lastName || !phone || !date1 || !time1) {
+        const warningMessage = document.getElementById('warningMessage');
+        warningMessage.innerText = 'These Fields are required';
+        warningMessage.style.display = 'block';
+        warningMessage.style.color = 'red'; 
+      } else {
+        document.getElementById('warningMessage').style.display = 'none';
+        alert('Form submitted successfully!');
+      }
+  
+
+      
+    });
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    //  jQuery code to enable nested dropdown functionality
+    $(document).ready(function() {
+      $('.dropdown-submenu .dropdown-toggle').on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).next('.dropdown-menu').toggle();
+      });
+    });
+  </script>
+</body>
+</html>
