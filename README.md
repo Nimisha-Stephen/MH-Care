@@ -59,7 +59,9 @@ The application uses a MySQL database named mh_care. The database includes table
 **How to use the website:**
 
 • Here the login username and password are already stored in the database
+
 • password and login information provided in the readme.txt
+
 • You need to download the XAMPP server to run your database connection
 
 
