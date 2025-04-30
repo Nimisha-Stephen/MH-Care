@@ -1,6 +1,6 @@
 **Project Overview:**
 
-MH-Care is a web-based application designed to provide mental health support and psychiatric services. The application allows users to manage patient information, book appointments, and access various mental health resources. It is built using PHP for the backend, MySQL for the database, and HTML/CSS with Bootstrap for the frontend.
+MH-Care is a demo web-based application designed to provide mental health support and psychiatric services. The application allows users to manage patient information, book appointments, and access various mental health resources. It is built using PHP for the backend, MySQL for the database, and HTML/CSS with Bootstrap for the frontend.
 
 **Features:**
 
@@ -42,7 +42,7 @@ The application uses a MySQL database named mh_care. The database includes table
 
 **Tables:**
 
-•	users:- Stores user credentials for authentication.
+•	users:- Stores doctor and receptionist credentials for authentication.
 
 •	patients:- Stores patient information including personal details, medical history, and contact information.
 
@@ -55,6 +55,14 @@ The application uses a MySQL database named mh_care. The database includes table
 •	Patient Management:- Users can add, view, edit, and delete patient records.
 
 •	Appointment Booking:- Navigate to the appointment booking page to schedule a psychiatric appointment.
+
+**How to use the website:**
+
+• Here the login username and password are already stored in the database
+• password and login information provided in the readme.txt
+• You need to download the XAMPP server to run your database connection
+
+
 
 
 
